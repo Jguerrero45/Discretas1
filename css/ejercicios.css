@@ -1,0 +1,30 @@
+.panel-ejercicio {
+    padding: 10vw 20vw;
+
+    height: 30vh;
+}
+
+.panel-ejercicio button {
+    width: 85px;
+}
+
+.permutation-container {
+    margin-top: 20px;
+}
+
+h4 {
+    color: #043d99
+}
+
+input {
+    width: 70px;
+    border-radius: 5px;
+    height: 25px;
+    padding-left: 7px;
+    border: 2px solid rgb(188, 188, 188);
+}
+
+.contenedor {
+    padding: 6vw 25vw;
+
+}

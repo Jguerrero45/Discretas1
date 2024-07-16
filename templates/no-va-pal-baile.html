@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion 4</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="funciones.js" defer></script>
+</head>
+
+<body>
+    <!--MAIN 1/ PANEL 1-->
+    <main>
+        <div class="botones">
+            <button>Ejercicios propuestos</button>
+            <button>Calculadora de combinatoria</button>
+        </div>
+
+        <article>
+            <h2>Ejercicios propuestos</h2>
+            <details> <!--EJERCICIO 1-->
+                <summary>1. ¿De cuántas maneras pueden sentarse 10 personas en un banco si hay 4 sitios disponibles?
+                </summary>
+                <div class="panel-ejercicio">
+                    <div>
+                        Consideraciones para resolver ejercicio
+                        <ul>
+                            <li>No importa el orden.</li>
+                            <li>No hay repetición.</li>
+                        </ul>
+
+                        <h4>
+                            Respuesta <br>
+                            Permutación sin repetición (nPk):
+
+                        </h4>
+
+                        <div id="permutation1" class="permutation-container">
+                            <!--operacion sustituyendo variables-->
+                            <math style="font-size: 20px" xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mrow>
+                                    <mi>nPk</mi>
+                                    <mo>=</mo>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>n</mi>
+                                            <mo>!</mo>
+                                        </mrow>
+                                        <mrow>
+                                            <mo>(n-k)</mo>
+                                            <mo>!</mo>
+                                        </mrow>
+                                    </mfrac>
+                                    <mo>=</mo>
+                                    <mi id="resultado1">resultado</mi>
+                                </mrow>
+                            </math>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <label for="nInput1">n =</label>
+                        <input type="number" id="inputN1" min="0" value="10" />
+                        <label for="kInput1">k =</label>
+                        <input type="number" id="inputR1" min="0" value="4" />
+
+                        <button class="permutacion-sin-repeticion" data-permutation="permutation1" data-n="inputN1"
+                            data-r="inputR1">Calcular</button>
+                    </div>
+                </div>
+            </details>
+
+            <details> <!--EJERCICIO 2-->
+                <summary>
+                    2. En una clase de 21 alumnos van a distribuirse 3 premios. Averiguar de cuántos modos puede hacerse
+                    si:
+                    <ul>
+                        <li>Los premios son diferentes.</li>
+                        <li>Los premios son iguales.</li>
+                    </ul>
+
+                </summary>
+                <div class="panel-ejercicio" style="display: block;">
+                    <div>
+                        <label for="nInput2">n =</label>
+                        <input type="number" id="inputN2" min="0" value="21" />
+                        <label for="kInput2">k =</label>
+                        <input type="number" id="inputR2" min="0" value="3" />
+
+                        <button class="permutacion-sin-repeticion combinatoria" data-permutation="permutation2"
+                            data-n="inputN2" data-r="inputR2">Calcular</button>
+                    </div>
+
+
+                    <div style="display: flex;">
+                        <div>
+                            Si los premios son diferentes:
+                            <ul>
+                                <li>No importa el orden.</li>
+                                <li>No hay repetición.</li>
+                            </ul>
+
+                            <h4>
+                                Respuesta <br>
+                                Permutación sin repetición (nPk):
+                            </h4>
+
+                            <div id="permutation2" class="permutation-container">
+                                <!--operacion sustituyendo variables-->
+                                <math style="font-size: 20px" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>nPk</mi>
+                                        <mo>=</mo>
+                                        <mfrac>
+                                            <mrow>
+                                                <mi>n</mi>
+                                                <mo>!</mo>
+                                            </mrow>
+                                            <mrow>
+                                                <mo>(n-k)</mo>
+                                                <mo>!</mo>
+                                            </mrow>
+                                        </mfrac>
+                                        <mo>=</mo>
+                                        <mi id="resultado2">resultado</mi>
+                                    </mrow>
+                                </math>
+                            </div>
+
+                        </div>
+
+                        <div><!--Segunda PREGUNTA-->
+                            Si los premios son iguales:
+                            <ul>
+                                <li>No importa el orden.</li>
+                                <li>Si hay repetición.</li>
+                            </ul>
+
+                            <h4>
+                                Respuesta <br>
+                                Combinatoria-Coeficiente Binominal (nCk):
+                            </h4>
+
+                            <div id="permutation2" class="permutation-container">
+                                <!--operacion sustituyendo variables-->
+                                <math style="font-size: 20px" xmlns="http://www.w3.org/1998/Math/MathML">
+                                    <mrow>
+                                        <mi>nCk</mi>
+                                        <mo>=</mo>
+                                        <mfrac>
+                                            <mrow>
+                                                <mi>n</mi>
+                                                <mo>!</mo>
+                                            </mrow>
+                                            <mrow>
+                                                <mo>(n-k)</mo>
+                                                <mo>!</mo>
+                                                <mo>k!</mo>
+                                            </mrow>
+                                        </mfrac>
+                                        <mo>=</mo>
+                                        <mi id="resultado2-2">resultado</mi>
+                                    </mrow>
+                                </math>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+
+
+        </article>
+
+    </main>
+
+</body>
+
+</html>
